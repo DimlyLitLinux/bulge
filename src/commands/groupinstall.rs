@@ -14,7 +14,7 @@ pub fn group_install(args: Vec<String>) {
 
     lock_exists();
 
-    create_lock().expect("Failed to create lock file. (Does /tmp/bulge.funny already exist?)");
+    create_lock().expect("Failed to create lock file. (Does /var/lock/bulge.lock already exist?)");
 
     let requested_groups: Vec<String> = args.clone().drain(2..).collect();
     let mut install_queue: HashSet<String> = HashSet::new();

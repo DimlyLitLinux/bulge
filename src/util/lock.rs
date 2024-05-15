@@ -4,19 +4,19 @@ use crate::util::macros::continue_prompt;
 
 /// Creates a lock file indicating that bulge is open
 pub fn create_lock() -> std::io::Result<()> {
-    File::create("/tmp/bulge.funny")?;
+    File::create("/var/lock/bulge.lock")?;
     Ok(())
 }
 
 /// Deletes the lock file
 pub fn remove_lock() -> std::io::Result<()>{
-    fs::remove_file("/tmp/bulge.funny")?;
+    fs::remove_file("/var/lock/bulge.lock")?;
     Ok(())
 }
 
 /// Returns true if the lock file exists on the file system
 pub fn check_lock() -> bool {
-    Path::new("/tmp/bulge.funny").exists()
+    Path::new("/var/lock/bulge.lock").exists()
 }
 
 /// Check if a bulge instance is already running and give the option of removing the lock file

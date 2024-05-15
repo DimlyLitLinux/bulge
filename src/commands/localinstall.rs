@@ -18,7 +18,7 @@ pub fn local_install(args: Vec<String>) {
 
     sudo::escalate_if_needed().expect("Failed to escalate to root.");
     lock_exists();
-    create_lock().expect("Failed to create lock file. (Does /tmp/bulge.funny already exist?)");
+    create_lock().expect("Failed to create lock file. (Does /var/lock/bulge.lock already exist?)");
 
     let packages: Vec<String> = args.clone().drain(2..).collect();
 
