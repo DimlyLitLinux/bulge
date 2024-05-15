@@ -45,6 +45,7 @@ fn main() {
         "remove" => commands::remove::remove(args),
 
         // Info commands
+        "search" => commands::search::search(args),
 
         // List commands
         "list" => commands::list::list(),
