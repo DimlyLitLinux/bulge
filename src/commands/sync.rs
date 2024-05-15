@@ -20,7 +20,7 @@ pub fn sync() {
 
     lock_exists();
 
-    create_lock().expect("Failed to create lock file. (Does /tmp/bulge.funny already exist?)");
+    create_lock().expect("Failed to create lock file. (Does /var/lock/bulge.lock already exist?)");
 
     println!("=== Synchronizing Repo Databases ===");
 
