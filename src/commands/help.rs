@@ -16,8 +16,8 @@ pub fn help() {
     println!("\t\t - Uninstall a specified package");
     //println!("\t bulge info <package>");
     //println!("\t\t - TODO");
-    //println!("\t bulge search <package>");
-    //println!("\t\t - TODO");
+    println!("\t bulge search <package>");
+    println!("\t\t - For now this will just look if the package exists in the repo without installing it");
     println!("\t bulge list");
     println!("\t\t - List all installed packages with their version and source");
 }

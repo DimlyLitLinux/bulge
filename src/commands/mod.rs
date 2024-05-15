@@ -6,3 +6,4 @@ pub mod localinstall;
 pub mod remove;
 pub mod list;
 pub mod groupinstall;
+pub mod search;
