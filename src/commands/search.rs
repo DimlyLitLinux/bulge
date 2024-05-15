@@ -30,4 +30,5 @@ pub fn search(args: Vec<String>) {
         else {
             println!("{} exists!", i)
         }
+    }
 }
